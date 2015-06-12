@@ -1,0 +1,9 @@
+**/.DS_Store
+dist
+node_modules
+config/config.yml
+npm-debug.log
+db/dump
+server/views/application.html
+server/views/error.html
+server/views/index.html

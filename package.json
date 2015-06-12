@@ -1,0 +1,49 @@
+{
+  "name": "simplex-solver",
+  "description": "Solves Simplex Equations",
+  "version": "0.0.1",
+  "main": "src/simplex.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SamDuvall/Providentium.git"
+  },
+  "dependencies": {
+    "bluebird": "^2.8.2",
+    "colors": "^1.1.0",
+    "consolidate": "^0.10.0",
+    "express": "^4.8.4",
+    "js-yaml": "0.3.7",
+    "mathjs": "^1.7.0",
+    "moment": "^2.9.0",
+    "morgan": "^1.2.2",
+    "underscore": "^1.7.0"
+  },
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "gulp": "~3.8.6",
+    "gulp-angular-templatecache": "^1.4.2",
+    "gulp-bower": "0.0.6",
+    "gulp-browserify": "~0.5.0",
+    "gulp-changed": "~0.4.0",
+    "gulp-filter": "^1.0.2",
+    "gulp-if": "^1.2.5",
+    "gulp-less": "~1.3.2",
+    "gulp-livereload": "^2.1.1",
+    "gulp-minify-css": "^0.3.11",
+    "gulp-rev": "^1.0.0",
+    "gulp-rev-replace": "^0.3.1",
+    "gulp-rimraf": "^0.1.0",
+    "gulp-shell": "^0.2.9",
+    "gulp-tap": "^0.1.3",
+    "gulp-uglify": "^1.0.1",
+    "gulp-useref": "^0.6.0",
+    "mocha": "^1.21.4",
+    "read": "1.0.x",
+    "run-sequence": "~0.3.6",
+    "stream-combiner": "~0.2.1",
+    "through2": "^0.6.3"
+  }
+}

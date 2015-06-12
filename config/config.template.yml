@@ -1,0 +1,16 @@
+# DONT PUT SENSITIVE INFORMATION IN HERE! COPY IT TO config.yml AND THEN CHANGE IT!
+defaults: &defaults
+  secret: 9408C2B60FE062D31CF82CABBDA92B1F006EC0478E11C95937C55843286CDB8B260881095DD5BCBB3B4A89ADD3A06A57DEB5F28F264ECB957115AD2C9911D6DF
+  seeder: mongodb://rbac@rbac.io:27017/rbac-production
+
+development:
+  <<: *defaults
+  port: 3000
+  uri: http://lvh.me:3000
+  mongodb: mongodb://localhost:27017/rbac-development
+
+test:
+  <<: *defaults
+  port: 3100
+  uri: http://lvh.me:3100
+  mongodb: mongodb://localhost:27017/rbac-test
