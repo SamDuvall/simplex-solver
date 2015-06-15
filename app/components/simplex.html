@@ -1,0 +1,63 @@
+<form class="ui form">
+  <div class="fields">
+    <div class="four wide field">
+      <div class="ui selection dropdown" ui-dropdown ng-model="simplex.type">
+        <input type="hidden" name="gender">
+        <div class="default text">Type</div>
+        <i class="dropdown icon"></i>
+        <div class="menu">
+          <div class="item" data-value="max">Maximize</div>
+          <div class="item" data-value="min" ng-if="false">Minimize</div>
+        </div>
+      </div>
+    </div>
+    <div class="twelve wide field">
+      <input type="text" name="equation" placeholder="Equation" ng-model="simplex.equation">
+    </div>
+  </div>
+  <div class="field">
+    <label for="constraints">Constraints</label>
+    <textarea id="constraints" ng-model="simplex.constraints"></textarea>
+  </div>
+  <div class="field">
+    <div class="ui toggle checkbox" ui-checkbox ng-model="showTableaus">
+      <input type="checkbox">
+      <label>Show Tableaus</label>
+    </div>
+  </div>
+  <div class="field">
+    <div class="ui submit button" ng-click="solve()">Solve</div>
+  </div>
+</form>
+
+<div class="tableau" ng-repeat="tableau in result.tableaus" ng-if="showTableaus">
+  <h4 class="ui dividing header">Tableau #{{$index + 1}}</h4>
+  <table class="ui celled compact table">
+    <thead>
+      <tr>
+        <th ng-repeat="variable in tableau.variables" ng-class="{pivot: $index == tableau.pivot.column}">{{variable}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="row in tableau.rows" ng-class="{pivot: $index == tableau.pivot.row}">
+        <td ng-repeat="cell in row track by $index" ng-class="{pivot: $index == tableau.pivot.column}">{{cell}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="result" ng-if="result">
+  <h4 class="ui dividing header">Results</h4>
+  <table class="ui celled compact table">
+    <thead>
+      <tr>
+        <th ng-repeat="(variable, value) in result.values">{{variable}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td ng-repeat="(variable, value) in result.values">{{value}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

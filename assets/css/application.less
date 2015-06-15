@@ -1,2 +1,27 @@
 @import '../../dist/lib/lesshat/build/lesshat';
 @import 'variables';
+
+#main {
+  padding-top: 50px;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+article.simplex {
+  .tableau {
+    margin: 20px 0;
+    tr.pivot {
+      font-weight: bold;
+    }
+    thead th.pivot, tbody td.pivot {
+      color: @red;
+    }
+  }
+
+  .result {
+    margin: 20px 0;
+  }
+}

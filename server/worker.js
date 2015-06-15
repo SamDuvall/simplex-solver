@@ -5,15 +5,8 @@ var config = require('../config');
 
 // Express Framework
 var express = require('express');
-var consolidate = require('consolidate');
 var app = express();
 app.config = config;
-
-// Server generated views
-var consolidate = require('consolidate');
-app.engine('html', consolidate.underscore);
-app.set('view engine', 'html');
-app.set('views', __dirname + '/views');
 
 // Static Assets
 var assetRootDir = path.join(__dirname, '..', 'dist');

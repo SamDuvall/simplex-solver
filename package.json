@@ -2,27 +2,22 @@
   "name": "simplex-solver",
   "description": "Solves Simplex Equations",
   "version": "0.0.1",
-  "main": "src/simplex.js",
+  "main": "src/index.js",
   "engines": {
     "node": ">=0.10.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/SamDuvall/Providentium.git"
+    "url": "https://github.com/SamDuvall/simplex-solver"
   },
   "dependencies": {
-    "bluebird": "^2.8.2",
-    "colors": "^1.1.0",
-    "consolidate": "^0.10.0",
-    "express": "^4.8.4",
-    "js-yaml": "0.3.7",
-    "mathjs": "^1.7.0",
-    "moment": "^2.9.0",
-    "morgan": "^1.2.2",
     "underscore": "^1.7.0"
   },
   "devDependencies": {
+    "bluebird": "^2.8.2",
     "chai": "^1.9.1",
+    "colors": "^1.1.0",
+    "express": "^4.8.4",
     "gulp": "~3.8.6",
     "gulp-angular-templatecache": "^1.4.2",
     "gulp-bower": "0.0.6",
@@ -40,7 +35,9 @@
     "gulp-tap": "^0.1.3",
     "gulp-uglify": "^1.0.1",
     "gulp-useref": "^0.6.0",
+    "js-yaml": "0.3.7",
     "mocha": "^1.21.4",
+    "morgan": "^1.2.2",
     "read": "1.0.x",
     "run-sequence": "~0.3.6",
     "stream-combiner": "~0.2.1",

@@ -141,7 +141,7 @@ gulp.task('build', function(cb) {
 });
 
 gulp.task('watch', ['build'], function() {
-  gulp.watch(['assets/js/**/*.js', 'app/**/*.js'], function() {
+  gulp.watch(['assets/js/**/*.js', 'app/**/*.js', 'src/**/*/.js'], function() {
     gulp.run('js');
   });
   gulp.watch('assets/css/**/*', function(changes) {
