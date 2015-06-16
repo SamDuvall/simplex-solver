@@ -16,17 +16,25 @@
     </div>
   </div>
   <div class="field">
-    <label for="constraints">Constraints</label>
+    <label for="constraints">Constraints <i class="help circle icon blue" data-position="right center" data-html="<div class='header'>Constraint Rules</div><div class='content'><ul class='ui list'><li>One constraints per line</li><li>Variables go on the left side</li><li>The operator can be <=, >= or =</li><li>The right hand side must be a number, which can be negative</li></ul></div>" class="ui avatar image" ui-popup></i></label>
     <textarea id="constraints" ng-model="simplex.constraints"></textarea>
   </div>
-  <div class="field">
-    <div class="ui toggle checkbox" ui-checkbox ng-model="showTableaus">
-      <input type="checkbox">
-      <label>Show Tableaus</label>
+  <div class="fields">
+    <div class="field">
+      <div class="ui submit primary button" ng-click="solve()" ng-class="{disabled: !isValid() || result}">Solve</div>
     </div>
-  </div>
-  <div class="field">
-    <div class="ui submit button" ng-click="solve()">Solve</div>
+    <div class="field">
+      <div class="ui button" ng-click="clear()" data-content="Clear equation and constraints" data-position="top center" data-variation="inverted" ui-popup>Clear</div>
+    </div>
+    <div class="field">
+      <div class="ui button" ng-click="example()" data-content="Populate with an example equation" data-position="top center" data-variation="inverted" ui-popup>Example</div>
+    </div>
+    <div class="field tableaus">
+      <div class="ui toggle checkbox" ui-checkbox ng-model="showTableaus">
+        <input type="checkbox">
+        <label>Show Tableaus</label>
+      </div>
+    </div>
   </div>
 </form>
 
@@ -47,7 +55,7 @@
 </div>
 
 <div class="result" ng-if="result">
-  <h4 class="ui dividing header">Results</h4>
+  <h4 class="ui dividing header">Solution</h4>
   <table class="ui celled compact table">
     <thead>
       <tr>

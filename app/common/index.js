@@ -1,6 +1,7 @@
 module.exports = function(app) {
   app.directive({
     uiCheckbox: require('./uiCheckbox'),
-    uiDropdown: require('./uiDropdown')
+    uiDropdown: require('./uiDropdown'),
+    uiPopup: require('./uiPopup')
   });
 }

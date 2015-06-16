@@ -1,5 +1,6 @@
 @import '../../dist/lib/lesshat/build/lesshat';
 @import 'variables';
+@import 'common';
 
 #main {
   padding-top: 50px;
@@ -8,9 +9,16 @@
 .container {
   max-width: 1080px;
   margin: 0 auto;
+  padding: 0 10px;
 }
 
 article.simplex {
+  .ui.form {
+    .field.tableaus {
+      margin: 7px 0;
+    }
+  }
+
   .tableau {
     margin: 20px 0;
     tr.pivot {
