@@ -21,6 +21,10 @@ The example above will yield the following object
 
     result = {max: 20, x: 0, y: 0, z: 5, tableaus: [...]}
 
+## Install
+
+    npm install simplex-solver
+
 ## Documentation
 
 ### simplex.maximize(equation, constraints)
