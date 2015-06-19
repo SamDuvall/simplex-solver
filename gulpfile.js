@@ -60,8 +60,18 @@ gulp.task('js', function() {
   ]);
 });
 
+// CSS (Semantic)
+gulp.task('css-semantic', function () {
+  var src = 'assets/css/semantic/theme.config';
+  var dst = 'dist/lib/semantic-ui/src';
+
+  return gulp.src(src)
+    // .pipe(changed(dst))
+    .pipe(gulp.dest(dst));
+});
+
 // CSS
-gulp.task('css', function () {
+gulp.task('css', ['css-semantic'], function () {
   return combineWatch([
     gulp.src(['assets/css/application.less']),
     less(),
