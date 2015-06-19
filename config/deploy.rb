@@ -42,9 +42,9 @@ task :deploy => :environment do
     invoke :'assets:compile'
     invoke :'deploy:cleanup'
 
-    # to :launch do
-    #   invoke :'restart'
-    # end
+    to :launch do
+      invoke :'restart'
+    end
   end
 end
 
