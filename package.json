@@ -10,6 +10,7 @@
     "type": "git",
     "url": "https://github.com/SamDuvall/simplex-solver"
   },
+  "license" : "MIT",
   "dependencies": {
     "underscore": "^1.7.0"
   },
